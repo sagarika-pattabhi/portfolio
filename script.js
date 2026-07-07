@@ -2,64 +2,58 @@ const portfolio = {
   owner: 'Sagarika Pattabhi',
   title: 'Data Analyst',
   kpis: {
-    projects: 4,
+    projects: 7,
     internships: 3,
     languages: 3
   },
   nodes: [
     { id: 'sagarika', label: 'Sagarika', type: 'core', detail: 'M.Sc. Data Analytics student at University of Galway with ML, BI, and automation experience.' },
     { id: 'projects', label: 'Projects', type: 'project', detail: 'Signease, CPS dashboards, SM Electronic automation, and Firebase expense tracking.' },
-    { id: 'skills', label: 'Skills', type: 'skill', detail: 'Python, SQL, R, Power BI, Tableau, Power Automate, Excel, MongoDB, and C.' },
     { id: 'education', label: 'Education', type: 'education', detail: 'M.Sc. CS-Data Analytics at University of Galway; B.E. AI & ML at BNMIT, First Class Honours.' },
-    { id: 'internships', label: 'Internships', type: 'internship', detail: 'Project App Development at Accenture, Data Analytics at SM Electronic, and Cybersecurity at TechByheart.' },
+    { id: 'Internships', label: 'Internships', type: 'internship', detail: 'Project App Development at Accenture, Data Analytics at SM Electronic, and Cybersecurity at TechByheart.' },
     { id: 'volunteer', label: 'Volunteer', type: 'service', detail: '120+ hours with LGS Trust and Vikasana Foundation on research and community events.' },
     { id: 'hobbies', label: 'Hobbies', type: 'expertise', detail: 'Painting, video games, event management, prop making, and cosplaying beyond the dashboard.' },
-    { id: 'sql', label: 'SQL', type: 'skill', detail: 'Querying, joining, and validating data — used in internship dashboards and reporting.' },
+    { id: 'sql', label: 'SQL', type: 'skill', detail: 'Querying, joining, and validating data - used in internship dashboards and reporting.' },
     { id: 'python', label: 'Python', type: 'skill', detail: 'Data analysis, ML modelling, NLP, and automation across coursework and projects.' },
-    { id: 'bi', label: 'BI', type: 'skill', detail: 'Power BI and Tableau dashboards for sales, HR, inventory, and student attendance.' },
+    { id: 'r', label: 'R', type: 'skill', detail: 'Statistical analysis and visualization in coursework.' },
+    { id: 'powerbi', label: 'Power BI', type: 'skill', detail: 'Dashboards for sales, HR, inventory, and student attendance at Accenture and SM Electronic.' },
+    { id: 'tableau', label: 'Tableau', type: 'skill', detail: 'Visual narratives for patterns, comparisons, and drilldowns.' },
+    { id: 'powerautomate', label: 'Power Automate', type: 'skill', detail: 'Finance reporting workflow at SM Electronic, cutting report time from 3-5 hours to under a minute.' },
+    { id: 'excel', label: 'Excel', type: 'skill', detail: 'Pivot models, analysis workflows, and rapid validation for business reporting.' },
+    { id: 'mongodb', label: 'MongoDB', type: 'skill', detail: 'NoSQL data for the Firebase Expense Tracker concurrent user data and authentication.' },
     { id: 'story', label: 'Storytelling', type: 'expertise', detail: 'Translating analysis into decisions, presentations, and stakeholder-ready recommendations.' },
     { id: 'stats', label: 'Statistics', type: 'expertise', detail: 'Trend analysis, segmentation, and inference supporting real-world reporting and ML work.' },
-    { id: 'excel', label: 'Excel', type: 'skill', detail: 'Pivot models, analysis workflows, and rapid validation for business reporting.' },
-    { id: 'viz', label: 'Visualization', type: 'expertise', detail: 'Charts and dashboards designed around audience comprehension — from data notebooks to exec views.' }
+    { id: 'viz', label: 'Visualization', type: 'expertise', detail: 'Charts and dashboards designed around audience comprehension - from data notebooks to exec views.' }
   ],
   links: [
     ['sagarika', 'projects'],
-    ['sagarika', 'skills'],
     ['sagarika', 'education'],
-    ['sagarika', 'internships'],
+    ['sagarika', 'Internships'],
     ['sagarika', 'volunteer'],
+    ['sagarika', 'hobbies'],
     ['projects', 'sql'],
     ['projects', 'python'],
-    ['projects', 'bi'],
+    ['projects', 'powerbi'],
     ['projects', 'story'],
-    ['skills', 'sql'],
-    ['skills', 'python'],
-    ['skills', 'excel'],
-    ['skills', 'viz'],
-    ['skills', 'stats'],
-    ['internships', 'bi'],
-    ['internships', 'python'],
+    ['projects', 'mongodb'],
+    ['Internships', 'powerbi'],
+    ['Internships', 'python'],
+    ['Internships', 'powerautomate'],
+    ['Internships', 'excel'],
     ['education', 'stats'],
+    ['education', 'r'],
     ['education', 'story'],
     ['volunteer', 'story'],
     ['viz', 'story'],
-    ['sagarika', 'hobbies'],
-    ['hobbies', 'viz']
-  ],
-  skills: [
-    { name: 'SQL', category: 'Data querying', level: 86, projects: 'Used for relational analysis, joins, aggregation, and validation in internship reporting.' },
-    { name: 'Python', category: 'Analysis & ML', level: 88, projects: 'Applied in data analysis, NLP, deep learning (Signease), and automation notebooks.' },
-    { name: 'R', category: 'Statistical computing', level: 74, projects: 'Used in coursework for statistical analysis and visualization.' },
-    { name: 'Power BI', category: 'Dashboarding', level: 80, projects: 'Built dashboards for sales, HR, inventory, and student attendance at Accenture and SM Electronic.' },
-    { name: 'Tableau', category: 'Visualization', level: 74, projects: 'Builds visual narratives for patterns, comparisons, and drilldowns.' },
-    { name: 'Power Automate', category: 'Workflow automation', level: 80, projects: 'Designed a finance reporting workflow at SM Electronic, cutting report time from 3-5 hours to under a minute.' },
-    { name: 'Excel', category: 'Business analysis', level: 88, projects: 'Used for fast modeling, pivot analysis, and stakeholder-ready summaries.' },
-    { name: 'MongoDB', category: 'NoSQL data', level: 70, projects: 'Used in the Firebase Expense Tracker for concurrent user data and authentication.' },
-    { name: 'Storytelling', category: 'Communication', level: 84, projects: 'Translates analysis into decisions, stakeholder presentations, and clear recommendations.' }
+    ['hobbies', 'viz'],
+    ['sql', 'excel'],
+    ['python', 'r'],
+    ['powerbi', 'tableau'],
+    ['stats', 'r']
   ],
   projects: [
     {
-      title: 'Signease — Sign Language Interpreter',
+      title: 'Signease  - Sign Language Interpreter',
       problem: 'Real-time sign-to-text and text-to-sign translation for accessible communication.',
       dataset: 'Camera-captured gesture data, sign language vocabulary, and 3D sign models.',
       methodology: 'Deep learning for gesture recognition, 3D avatar design in Blender, and a camera-based input pipeline.',
@@ -69,7 +63,7 @@ const portfolio = {
       bars: [62, 78, 88, 74, 92, 80, 86, 95]
     },
     {
-      title: 'SM Electronic — Finance Automation',
+      title: 'SM Electronic  - Finance Automation',
       problem: 'The Finance team spent 3–5 hours on each manual reporting cycle.',
       dataset: 'Finance team reporting workflows, sales and HR data, and Singapore inventory data.',
       methodology: 'Identified reporting inefficiencies, designed a Power Automate workflow, and built supporting dashboards.',
@@ -79,7 +73,7 @@ const portfolio = {
       bars: [55, 72, 88, 82, 78, 90, 74, 86]
     },
     {
-      title: 'Chicago Public Schools — Data Insights',
+      title: 'Chicago Public Schools  - Data Insights',
       problem: 'Mentors needed visibility into student attendance and data trends to make decisions.',
       dataset: 'Chicago Public Schools student and operational data, plus ingestion pipelines.',
       methodology: 'Researched and tested Microsoft Fabric and Lakehouse for data ingestion; built interactive dashboards.',
@@ -97,6 +91,36 @@ const portfolio = {
       result: 'A responsive web app supporting concurrent users with dashboards and financial reports.',
       insight: 'Secure multi-user tracking',
       bars: [38, 58, 72, 64, 78, 70, 82, 76]
+    },
+    {
+      title: 'RecipeSnap  - TikTok/YouTube Recipe Grabber',
+      problem: 'Cooking videos rarely include actual recipes  - just fast talking and fleeting on-screen text.',
+      dataset: 'Video downloads, audio transcriptions, OCR-extracted text, and nutritional databases.',
+      methodology: 'yt-dlp downloads videos, faster-whisper transcribes audio, tesseract OCRs on-screen text, and Ollama/Claude reconciles everything into a clean recipe with amounts.',
+      tools: ['Python', 'yt-dlp', 'ffmpeg', 'faster-whisper', 'Tesseract', 'Ollama'],
+      result: 'A script that produces readable recipes with ingredients, amounts, and step-by-step instructions from any cooking video.',
+      insight: 'Videos to recipes',
+      bars: [50, 65, 78, 72, 80, 75, 82, 70]
+    },
+    {
+      title: 'AdScan  - Undisclosed Ad Detector',
+      problem: 'Sponsored content often goes undisclosed, misleading viewers.',
+      dataset: 'Social media posts, caption text, engagement patterns, and FTC disclosure guidelines.',
+      methodology: 'NLP analysis of captions and comments, pattern recognition for sponsor language, and sentiment scoring.',
+      tools: ['Python', 'NLP', 'Machine Learning', 'Data Analysis'],
+      result: 'In Progress',
+      insight: 'Transparency first',
+      bars: [45, 60, 72, 68, 78, 70, 75, 65]
+    },
+    {
+      title: 'Capstone Project',
+      problem: 'To be determined.',
+      dataset: 'TBD',
+      methodology: 'TBD',
+      tools: ['TBD'],
+      result: 'In Progress',
+      insight: 'Coming soon',
+      bars: [40, 55, 65, 60, 70, 65, 70, 60]
     }
   ],
   internships: [
@@ -134,7 +158,7 @@ function initTheme() {
 }
 
 function initReveal() {
-  const items = document.querySelectorAll('.reveal, .timeline-item');
+  const items = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
@@ -300,41 +324,6 @@ function clearActiveNode() {
   });
 }
 
-function renderSkills() {
-  const map = document.querySelector('#skillMap');
-  const detail = document.querySelector('#skillDetail');
-  map.innerHTML = portfolio.skills
-    .map(
-      skill => `
-        <button class="skill-chip" type="button" data-skill="${skill.name}">
-          <strong>${skill.name}</strong>
-          <span>${skill.category}</span>
-        </button>
-      `
-    )
-    .join('');
-
-  const setSkill = skill => {
-    detail.innerHTML = `
-      <span>${skill.category}</span>
-      <h3>${skill.name}</h3>
-      <p>${skill.projects}</p>
-      <div class="meter" aria-label="${skill.level}% proficiency"><i style="--level: ${skill.level}%"></i></div>
-      <p>${skill.level}% applied confidence based on the current portfolio inventory.</p>
-    `;
-    document.querySelectorAll('.skill-chip').forEach(chip => {
-      chip.classList.toggle('is-active', chip.dataset.skill === skill.name);
-    });
-  };
-
-  map.querySelectorAll('.skill-chip').forEach(chip => {
-    const skill = portfolio.skills.find(item => item.name === chip.dataset.skill);
-    chip.addEventListener('mouseenter', () => setSkill(skill));
-    chip.addEventListener('focus', () => setSkill(skill));
-    chip.addEventListener('click', () => setSkill(skill));
-  });
-}
-
 function renderProjects() {
   const grid = document.querySelector('#projectsGrid');
   grid.innerHTML = portfolio.projects
@@ -390,99 +379,8 @@ function renderInternships() {
     .join('');
 }
 
-function initTimeline() {
-  const START = new Date('2021-08-01');
-  const END   = new Date('2026-06-01');
-  const TOTAL = END - START;
-
-  function pct(d) { return ((new Date(d) - START) / TOTAL * 100).toFixed(3) + '%'; }
-  function pctNum(d) { return (new Date(d) - START) / TOTAL * 100; }
-  function span(s, e) { return (pctNum(e) - pctNum(s)).toFixed(3) + '%'; }
-
-  const tl = document.getElementById('tl');
-  if (!tl) return;
-
-  tl.innerHTML = '';
-
-  const eduRow = document.createElement('div');
-  eduRow.className = 'edu-row';
-
-  [
-    { start: '2021-08-01', end: '2025-08-01', name: 'BE in AI & Machine Learning', detail: 'BNMIT, Bengaluru · Aug 2021–Aug 2025' },
-    { start: '2025-08-01', end: '2026-06-01', name: 'MSc Computer Science — Data Analytics', detail: 'University of Galway · Aug 2025–present' },
-  ].forEach(e => {
-    const block = document.createElement('div');
-    block.className = 'edu-block';
-    block.style.left = pct(e.start);
-    block.style.width = span(e.start, e.end);
-    block.innerHTML = `<div class="tl-tag">Education</div><div class="tl-name">${e.name}</div><div class="tl-detail">${e.detail}</div>`;
-    eduRow.appendChild(block);
-  });
-  tl.appendChild(eduRow);
-
-  const axisRow = document.createElement('div');
-  axisRow.className = 'axis-row';
-  const axisLine = document.createElement('div');
-  axisLine.className = 'axis-line';
-  axisRow.appendChild(axisLine);
-
-  ['2021-08-01', '2022-01-01', '2023-01-01', '2024-01-01', '2025-01-01', '2025-08-01', '2026-01-01'].forEach(d => {
-    const lbl = document.createElement('div');
-    lbl.className = 'tl-year-label';
-    lbl.style.left = pct(d);
-    lbl.textContent = d === '2025-08-01' ? 'Aug 2025' : new Date(d).getFullYear();
-    axisRow.appendChild(lbl);
-  });
-  tl.appendChild(axisRow);
-
-  const bottomRow = document.createElement('div');
-  bottomRow.className = 'bottom-row';
-
-  const bottomItems = [
-    { type: 'work',    start: '2023-10-01', end: '2023-11-30', name: 'Cybersecurity intern',     detail: 'TechByheart',       offset: 0 },
-    { type: 'project', start: '2024-05-01', end: '2024-08-31', name: 'Firebase expense tracker', detail: 'May–Aug 2024',      offset: 0 },
-    { type: 'work',    start: '2024-11-01', end: '2025-02-28', name: 'Data analyst intern',       detail: 'SM Electronics',    offset: 0 },
-    { type: 'project', start: '2024-11-01', end: '2025-03-31', name: 'Signease',                 detail: 'Nov 2024–Mar 2025', offset: 58 },
-    { type: 'work',    start: '2025-02-01', end: '2025-06-30', name: 'App dev intern',            detail: 'Accenture',         offset: 0 },
-  ];
-
-  bottomItems.forEach(item => {
-    const midPct = (pctNum(item.start) + pctNum(item.end)) / 2;
-
-    const stem = document.createElement('div');
-    stem.className = 'tl-stem';
-    stem.style.left = midPct.toFixed(3) + '%';
-    stem.style.top = '0';
-    stem.style.height = (item.offset ? item.offset + 16 : 16) + 'px';
-    bottomRow.appendChild(stem);
-
-    const dot = document.createElement('div');
-    dot.className = `tl-dot tl-dot-${item.type}`;
-    dot.style.left = midPct.toFixed(3) + '%';
-    axisRow.appendChild(dot);
-
-    const card = document.createElement('div');
-    card.className = `item-block ${item.type}`;
-    card.style.left = `calc(${midPct.toFixed(3)}% - 65px)`;
-    card.style.top = (item.offset ? item.offset + 16 : 16) + 'px';
-    card.innerHTML = `<div class="tl-tag">${item.type}</div><div class="tl-name">${item.name}</div><div class="tl-detail">${item.detail}</div>`;
-    bottomRow.appendChild(card);
-  });
-
-  ['2021-08-01', '2025-08-01'].forEach(d => {
-    const dot = document.createElement('div');
-    dot.className = 'tl-dot tl-dot-edu';
-    dot.style.left = pct(d);
-    axisRow.appendChild(dot);
-  });
-
-  tl.appendChild(bottomRow);
-}
-
 initTheme();
-renderSkills();
 renderProjects();
-initTimeline();
 renderInternships();
 initReveal();
 animateCounters();
@@ -493,6 +391,5 @@ window.addEventListener('resize', () => {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(() => {
     drawNetwork();
-    initTimeline();
   }, 120);
 });

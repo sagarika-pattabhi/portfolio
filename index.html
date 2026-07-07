@@ -33,10 +33,9 @@
         </span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
+        <a href="#top">About</a>
         <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
+        <a href="#internships">Internships</a>
         <a href="#contact">Contact</a>
       </nav>
       <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle dark mode">
@@ -51,6 +50,19 @@
           <h1 id="hero-title">Sagarika Pattabhi</h1>
           <p class="hero-title">Data Analyst</p>
           <p class="value-prop">Always curious, occasionally caffeinated.</p>
+          <div class="focus-card reveal">
+            <p>
+              Computer science student in Galway. I'm into data engineering and visualisation, but what I
+              really love is the storytelling part. There's always a story hiding in the data, and figuring
+              out what it's trying to say never gets old.
+            </p>
+            <div class="focus-chips" aria-label="Areas of interest">
+              <span>Data Visualisation</span>
+              <span>Data Warehousing</span>
+              <span>Machine Learning</span>
+              <span>Exploratory Analysis</span>
+            </div>
+          </div>
           <div class="hero-actions">
             <a class="primary-action" href="#projects">Explore work</a>
             <a class="secondary-action" href="resume.pdf" download>Download resume</a>
@@ -58,33 +70,10 @@
         </div>
 
         <div class="hero-stage">
-          <div class="hero-dashboard reveal" aria-label="Interactive portfolio dashboard">
-            <div class="dashboard-top">
-              <div>
-                <p class="panel-label">Portfolio graph</p>
-                <h2>Capability map</h2>
-              </div>
-              <div class="status-pill"><span></span> Interactive</div>
-            </div>
-            <div class="network-shell">
-              <svg id="portfolioNetwork" role="img" aria-labelledby="networkTitle networkDesc"></svg>
-              <span id="networkTitle" class="sr-only">Portfolio network visualization</span>
-              <span id="networkDesc" class="sr-only">
-                A relationship graph connecting Sagarika Pattabhi's projects, skills, education,
-                certifications, volunteer work, and expertise areas.
-              </span>
-              <aside class="node-inspector" id="nodeInspector" aria-live="polite">
-                <span>Select a node</span>
-                <strong>Portfolio overview</strong>
-                <p>Hover or tap a node to highlight related skills, projects, and milestones.</p>
-              </aside>
-            </div>
-          </div>
-
           <div class="kpi-grid" aria-label="Portfolio summary metrics">
             <article class="kpi-card reveal">
               <span>Projects</span>
-              <strong data-count="4">0</strong>
+              <strong data-count="7">0</strong>
               <p>featured case studies</p>
             </article>
             <article class="kpi-card reveal">
@@ -98,67 +87,54 @@
               <p>spoken languages</p>
             </article>
           </div>
-        </div>
-      </section>
 
-    <section class="section about-section" id="about" aria-labelledby="about-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">About</p>
-          <h2 id="about-title">Hi, I'm Sagarika.</h2>
-        </div>
-        <div class="focus-card reveal">
-          <p>
-            Computer science student in Galway. I'm into data engineering and visualisation, but what I
-            really love is the storytelling part. There's always a story hiding in the data, and figuring
-            out what it's trying to say never gets old.
-          </p>
-          <div class="focus-chips" aria-label="Areas of interest">
-            <span>Data Visualisation</span>
-            <span>Data Warehousing</span>
-            <span>Machine Learning</span>
-            <span>Exploratory Analysis</span>
-          </div>
-        </div>
-      </section>
-      <section class="section" id="skills" aria-labelledby="skills-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Skills</p>
-          <h2 id="skills-title">Grouped by how the work gets done.</h2>
-        </div>
-        <div class="skill-layout">
-          <div class="skill-map reveal" id="skillMap" aria-label="Interactive skill categories"></div>
-          <div class="skill-detail reveal" id="skillDetail" aria-live="polite">
-            <span>Hover a skill</span>
-            <h3>Skill context</h3>
-            <p>Explore proficiency, connected projects, and the role each skill plays in analysis.</p>
+          <div class="dashboard-body">
+            <div class="node-legend reveal">
+              <h3>Node types</h3>
+              <div class="legend-row"><span class="legend-dot-core"></span>Core</div>
+              <div class="legend-row"><span class="legend-dot-project"></span>Projects</div>
+              <div class="legend-row"><span class="legend-dot-skill"></span>Skills</div>
+              <div class="legend-row"><span class="legend-dot-edu"></span>Education</div>
+              <div class="legend-row"><span class="legend-dot-work"></span>Internships</div>
+              <div class="legend-row"><span class="legend-dot-service"></span>Service</div>
+              <div class="legend-row"><span class="legend-dot-expertise"></span>Expertise</div>
+            </div>
+
+            <div class="hero-dashboard reveal" aria-label="Interactive portfolio dashboard">
+              <div class="dashboard-top">
+                <div>
+                  <p class="panel-label">Portfolio graph</p>
+                  <h2>Capability map</h2>
+                </div>
+                <div class="status-pill"><span></span> Interactive</div>
+              </div>
+              <div class="network-shell">
+                <svg id="portfolioNetwork" role="img" aria-labelledby="networkTitle networkDesc"></svg>
+                <span id="networkTitle" class="sr-only">Portfolio network visualization</span>
+                <span id="networkDesc" class="sr-only">
+                  A relationship graph connecting Sagarika Pattabhi's projects, skills, education,
+                  certifications, volunteer work, and expertise areas.
+                </span>
+                <aside class="node-inspector" id="nodeInspector" aria-live="polite">
+                  <span>Select a node</span>
+                  <strong>Portfolio overview</strong>
+                  <p>Hover or tap a node to highlight related skills, projects, and milestones.</p>
+                </aside>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section" id="projects" aria-labelledby="projects-title">
         <div class="section-heading reveal">
-          <p class="eyebrow">Projects</p>
-          <h2 id="projects-title">Case studies framed around decisions.</h2>
+          <p class="eyebrow">Solving Minor Inconveniences</p>
+          <h2 id="projects-title">Projects</h2>
+          <p>Things I've worked on</p>
         </div>
         <div class="projects-grid" id="projectsGrid"></div>
       </section>
-<section class="section split-section" id="experience" aria-labelledby="experience-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Experience</p>
-          <h2 id="experience-title">A few years of figuring things out.</h2>
-        </div>
-        <div class="stream-card reveal">
-          <div class="timeline-wrap">
-            <div class="timeline" id="tl"></div>
-          </div>
-          <div class="timeline-legend">
-            <div class="legend-item"><div class="legend-dot" style="background:var(--teal)"></div> Education</div>
-            <div class="legend-item"><div class="legend-dot" style="background:var(--sage)"></div> Work</div>
-            <div class="legend-item"><div class="legend-dot" style="background:var(--amber)"></div> Projects</div>
-          </div>
-        </div>
-      </section>
-      
+
       <section class="section" id="internships" aria-labelledby="internships-title">
         <div class="section-heading reveal">
           <p class="eyebrow">Internships</p>
