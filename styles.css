@@ -142,7 +142,6 @@ input {
   width: min(var(--max), calc(100% - 2rem));
   margin: 0 auto;
   padding: 1rem 0;
-  backdrop-filter: blur(18px);
 }
 
 .brand,
