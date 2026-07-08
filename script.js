@@ -8,48 +8,46 @@ const portfolio = {
   },
   nodes: [
     { id: 'sagarika', label: 'Sagarika', type: 'core', detail: 'M.Sc. Data Analytics student at University of Galway with ML, BI, and automation experience.' },
-    { id: 'projects', label: 'Projects', type: 'project', detail: 'Signease, CPS dashboards, SM Electronic automation, and Firebase expense tracking.' },
-    { id: 'education', label: 'Education', type: 'education', detail: 'M.Sc. CS-Data Analytics at University of Galway; B.E. AI & ML at BNMIT, First Class Honours.' },
-    { id: 'Internships', label: 'Internships', type: 'internship', detail: 'Project App Development at Accenture, Data Analytics at SM Electronic, and Cybersecurity at TechByheart.' },
-    { id: 'volunteer', label: 'Volunteer', type: 'service', detail: '120+ hours with LGS Trust and Vikasana Foundation on research and community events.' },
-    { id: 'hobbies', label: 'Hobbies', type: 'expertise', detail: 'Painting, video games, event management, prop making, and cosplaying beyond the dashboard.' },
-    { id: 'sql', label: 'SQL', type: 'skill', detail: 'Querying, joining, and validating data - used in internship dashboards and reporting.' },
-    { id: 'python', label: 'Python', type: 'skill', detail: 'Data analysis, ML modelling, NLP, and automation across coursework and projects.' },
-    { id: 'r', label: 'R', type: 'skill', detail: 'Statistical analysis and visualization in coursework.' },
-    { id: 'powerbi', label: 'Power BI', type: 'skill', detail: 'Dashboards for sales, HR, inventory, and student attendance at Accenture and SM Electronic.' },
-    { id: 'tableau', label: 'Tableau', type: 'skill', detail: 'Visual narratives for patterns, comparisons, and drilldowns.' },
-    { id: 'powerautomate', label: 'Power Automate', type: 'skill', detail: 'Finance reporting workflow at SM Electronic, cutting report time from 3-5 hours to under a minute.' },
-    { id: 'excel', label: 'Excel', type: 'skill', detail: 'Pivot models, analysis workflows, and rapid validation for business reporting.' },
-    { id: 'mongodb', label: 'MongoDB', type: 'skill', detail: 'NoSQL data for the Firebase Expense Tracker concurrent user data and authentication.' },
-    { id: 'story', label: 'Storytelling', type: 'expertise', detail: 'Translating analysis into decisions, presentations, and stakeholder-ready recommendations.' },
-    { id: 'stats', label: 'Statistics', type: 'expertise', detail: 'Trend analysis, segmentation, and inference supporting real-world reporting and ML work.' },
-    { id: 'viz', label: 'Visualization', type: 'expertise', detail: 'Charts and dashboards designed around audience comprehension - from data notebooks to exec views.' }
+    { id: 'projects', label: 'Projects', type: 'category', detail: 'Case studies and builds.' },
+    { id: 'education', label: 'Education', type: 'category', detail: 'Academic background.' },
+    { id: 'Internships', label: 'Internships', type: 'category', detail: 'Industry experience.' },
+    { id: 'volunteer', label: 'Volunteer', type: 'category', detail: 'Community involvement.' },
+    { id: 'dashboards', label: 'Dashboards', type: 'sub', parent: 'projects', detail: 'Power BI and Tableau dashboards for sales, HR, inventory, and student attendance.' },
+    { id: 'signease', label: 'Signease', type: 'sub', parent: 'projects', detail: 'Real-time sign-to-text and text-to-sign translation with 3D avatar.' },
+    { id: 'adscan', label: 'AdScan', type: 'sub', parent: 'projects', detail: 'Undisclosed ad detector using NLP and sentiment analysis.' },
+    { id: 'recipesnap', label: 'RecipeSnap', type: 'sub', parent: 'projects', detail: 'TikTok/YouTube recipe grabber using yt-dlp, whisper, and OCR.' },
+    { id: 'bnmit', label: 'BNMIT', type: 'sub', parent: 'education', detail: 'B.E. AI & Machine Learning, First Class Honours.' },
+    { id: 'galway', label: 'UoG', type: 'sub', parent: 'education', detail: 'University of Galway, MSc Computer Science - Data Analytics.' },
+    { id: 'accenture', label: 'Accenture', type: 'sub', parent: 'Internships', detail: 'Project App Development Intern, Data & AI.' },
+    { id: 'smelectronic', label: 'SM Electronic', type: 'sub', parent: 'Internships', detail: 'Data Analyst Intern, Analytics.' },
+    { id: 'techbyheart', label: 'TechByHeart', type: 'sub', parent: 'Internships', detail: 'Cybersecurity Intern, Security.' },
+    { id: 'galwayarts', label: 'GIAF', type: 'sub', parent: 'volunteer', detail: 'Galway International Arts Festival, event support and coordination.' },
+    { id: 'cyclestreet', label: 'Cycle Street', type: 'sub', parent: 'volunteer', detail: 'Community cycling initiative.' }
   ],
   links: [
     ['sagarika', 'projects'],
     ['sagarika', 'education'],
     ['sagarika', 'Internships'],
     ['sagarika', 'volunteer'],
-    ['sagarika', 'hobbies'],
-    ['projects', 'sql'],
-    ['projects', 'python'],
-    ['projects', 'powerbi'],
-    ['projects', 'story'],
-    ['projects', 'mongodb'],
-    ['Internships', 'powerbi'],
-    ['Internships', 'python'],
-    ['Internships', 'powerautomate'],
-    ['Internships', 'excel'],
-    ['education', 'stats'],
-    ['education', 'r'],
-    ['education', 'story'],
-    ['volunteer', 'story'],
-    ['viz', 'story'],
-    ['hobbies', 'viz'],
-    ['sql', 'excel'],
-    ['python', 'r'],
-    ['powerbi', 'tableau'],
-    ['stats', 'r']
+    ['projects', 'dashboards'],
+    ['projects', 'signease'],
+    ['projects', 'adscan'],
+    ['projects', 'recipesnap'],
+    ['education', 'bnmit'],
+    ['education', 'galway'],
+    ['Internships', 'accenture'],
+    ['Internships', 'smelectronic'],
+    ['Internships', 'techbyheart'],
+    ['volunteer', 'galwayarts'],
+    ['volunteer', 'cyclestreet'],
+    ['dashboards', 'signease'],
+    ['signease', 'adscan'],
+    ['adscan', 'recipesnap'],
+    ['bnmit', 'galway'],
+    ['accenture', 'smelectronic'],
+    ['smelectronic', 'techbyheart'],
+    ['galwayarts', 'cyclestreet'],
+    ['dashboards', 'accenture']
   ],
   projects: [
     {
@@ -205,31 +203,62 @@ function drawNetwork() {
   const width = box.width;
   const height = box.height;
   const centerX = width / 2;
-  const centerY = height / 2 - 8;
-  const radius = Math.min(width, height) * 0.29;
-  const colors = {
+  const centerY = height / 2;
+
+  const categoryColors = {
     core: '#192841',
-    project: '#0d6a7d',
-    skill: '#3aa6b2',
-    education: '#a3b18a',
-    internship: '#f5e8aa',
-    service: '#a3b18a',
-    expertise: '#8fd5d3'
+    projects: { category: '#0d6a7d', sub: '#8fd5d3' },
+    education: { category: '#a3b18a', sub: '#c8d8b8' },
+    Internships: { category: '#d4a017', sub: '#f5e8aa' },
+    volunteer: { category: '#d4816b', sub: '#ebb8a8' }
   };
 
-  const positioned = portfolio.nodes.map((node, index) => {
-    if (node.id === 'sagarika') return { ...node, x: centerX, y: centerY };
-    const step = (Math.PI * 2) / (portfolio.nodes.length - 1);
-    const angle = step * (index - 1) - Math.PI / 2;
-    const wobble = index % 2 ? 0.86 : 1.08;
-    return {
-      ...node,
-      x: centerX + Math.cos(angle) * radius * wobble,
-      y: centerY + Math.sin(angle) * radius * wobble
-    };
+  function getNodeColor(node) {
+    if (node.type === 'core') return categoryColors.core;
+    const cat = node.type === 'category' ? node.id : node.parent;
+    const pair = categoryColors[cat];
+    if (!pair) return '#ccc';
+    return node.type === 'category' ? pair.category : pair.sub;
+  }
+
+  const radii = {
+    core: 20,
+    category: 14,
+    sub: 10
+  };
+
+  const labelOffsets = {
+    core: 32,
+    category: 24,
+    sub: 16
+  };
+
+  const circleRadius = Math.min(width, height) * 0.38;
+  const angleStep = (Math.PI * 2) / 15;
+  const startAngle = -Math.PI / 2;
+
+  const nodePositions = {};
+  portfolio.nodes.forEach((node, i) => {
+    if (node.type === 'core') {
+      nodePositions[node.id] = { x: centerX, y: centerY };
+    } else {
+      const angle = startAngle + i * angleStep;
+      nodePositions[node.id] = {
+        x: centerX + Math.cos(angle) * circleRadius,
+        y: centerY + Math.sin(angle) * circleRadius
+      };
+    }
   });
 
-  const byId = new Map(positioned.map(node => [node.id, node]));
+  const nodes = portfolio.nodes.map(node => ({
+    ...node,
+    x: nodePositions[node.id]?.x ?? centerX,
+    y: nodePositions[node.id]?.y ?? centerY
+  }));
+
+  const nodeMap = new Map(nodes.map(n => [n.id, n]));
+  const byId = new Map(nodes.map(node => [node.id, node]));
+
   svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
   svg.innerHTML = '';
 
@@ -240,6 +269,7 @@ function drawNetwork() {
   portfolio.links.forEach(([source, target]) => {
     const a = byId.get(source);
     const b = byId.get(target);
+    if (!a || !b) return;
     const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
     line.setAttribute('x1', a.x);
     line.setAttribute('y1', a.y);
@@ -247,27 +277,34 @@ function drawNetwork() {
     line.setAttribute('y2', b.y);
     line.dataset.source = source;
     line.dataset.target = target;
+    const isPrimary = source === 'sagarika';
+    const isTertiary = a.type === 'sub' && b.type === 'sub';
+    line.dataset.level = isPrimary ? 'primary' : isTertiary ? 'tertiary' : 'secondary';
+    if (isPrimary) {
+      line.style.stroke = getNodeColor(b);
+      line.style.strokeOpacity = '0.35';
+    }
     line.classList.add('network-link');
     linkGroup.append(line);
   });
 
-  positioned.forEach((node, index) => {
+  nodes.forEach((node, index) => {
     const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
     group.setAttribute('transform', `translate(${node.x}, ${node.y})`);
     group.setAttribute('tabindex', '0');
     group.setAttribute('role', 'button');
-    group.setAttribute('aria-label', `${node.label}: ${node.detail}`);
+    group.setAttribute('aria-label', node.label);
     group.dataset.id = node.id;
     group.classList.add('network-node');
 
     const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    circle.setAttribute('r', node.type === 'core' ? 20 : 12);
-    circle.setAttribute('fill', colors[node.type]);
+    circle.setAttribute('r', radii[node.type] || 10);
+    circle.setAttribute('fill', getNodeColor(node));
 
     const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
     text.setAttribute('class', 'network-label');
     text.setAttribute('text-anchor', 'middle');
-    text.setAttribute('y', node.type === 'core' ? 34 : 26);
+    text.setAttribute('y', labelOffsets[node.type] || 20);
     text.textContent = node.label;
 
     if (!prefersReducedMotion) {
@@ -276,7 +313,7 @@ function drawNetwork() {
           { opacity: 0, transform: `translate(${centerX}px, ${centerY}px) scale(0.8)` },
           { opacity: 1, transform: `translate(${node.x}px, ${node.y}px) scale(1)` }
         ],
-        { duration: 700, delay: index * 45, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'both' }
+        { duration: 700, delay: index * 30, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'both' }
       );
     }
 
@@ -315,7 +352,7 @@ function setActiveNode(id, byId, inspector) {
   });
 
   const node = byId.get(id);
-  inspector.innerHTML = `<span>${node.type}</span><strong>${node.label}</strong><p>${node.detail}</p>`;
+  inspector.innerHTML = `<strong>${node.label}</strong><p>${node.detail}</p>`;
 }
 
 function clearActiveNode() {
